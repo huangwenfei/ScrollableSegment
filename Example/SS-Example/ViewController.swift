@@ -10,18 +10,8 @@ import Yang
 
 import ScrollableSegment
 
-enum Index: Int, Hashable, CaseIterable {
+public enum Index: Int, Hashable, CaseIterable {
     case item1, item2, item3
-    
-    public var preview: Self? {
-        let value = self.rawValue - 1
-        return .init(rawValue: value)
-    }
-    
-    public var next: Self? {
-        let value = self.rawValue + 1
-        return .init(rawValue: value)
-    }
     
     public var loopPreview: Self {
         let value = self.rawValue - 1
